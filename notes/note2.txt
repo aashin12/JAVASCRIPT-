@@ -1,0 +1,293 @@
+javascript
+----------
+
+features
+--------
+
+used in both front end(browser) and backend(node js environment )
+js - behaviour - frontend
+   - logical operation -backend
+it supports both procedural programmng paradigm and object oriented progrming(oops)
+single thread programming language - line by line execution
+
+procedural programing paradigm
+-----------------------------
+unlike oops procedural programing consider data and methods as two differnt entities and follows step by step computation.
+
+display
+-------
+console.log(content)
+
+data types in js
+----------------
+
+generally there are 2 data types -
+1 primitive datatype - immutable datatype - 
+eg , x=hello
+     x=Hello  can be reassigned but not be changed
+
+     1 string - represents sequence of characters enclosed in single,double quotes
+     2 number - represents both integer a well as floatig point numbers
+     3 Boolean - represents logcal values (true or false)
+     4 BigInt - represents larger number which comes outside the limit of number datatypes
+     5 Null - reprents intensional absence of value
+     6 undefined - variable is declared but value is not assigned
+     7 symbol - generate unique identifiers
+              - symbol()
+              - basically used in creatng libraries and modules based on js
+2 non-primitive datatype - mutable
+     8 object - reprented using key:value pairs
+     eg ; object,array,functions
+
+typeof - predefined method to check the datatype of a variable
+
+variable
+--------
+used to store data
+identifiers - rules to create a variable
+     1. variable name can have letters ,digits,underscore ext 
+     2. name should not start with digits 
+     3. no white space between 2 words of  variable name 
+
+syntax
+------
+variablename = value
+keyword variable = value
+
+keywords
+--------
+reserved words - which provide certain meanings to the variable
+ 
+     - const - reassigning not possible,hoisting is not possible
+     - var  - reassigning possible, hoisting is possible, function scope or global level scope
+     - let  - reassigning possible, hoisting is not possible,block level scope
+
+Hoisting
+--------
+using a variable before it is created
+
+concatenation
+-------------
+appending of one or more datatypes
+
+
+template literals
+-----------------
+way of displaying contents
+console.log(variablename)
+
+`text ${variablename}`
+
+- js is dynamically typed programing languagae - changs the datatype 
+
+operators
+---------
+1. Assignment operators - " = "
+2. Arithmatic operators - " +,-,*,/,%,** "
+3. Relational operators - " >,<,>=,<=,==,=== "
+   - it returns boolean value
+   ==(checks onl value)(type conversion is done)
+   ===(checks both value as well as datatype)
+4. Logical opeartors - " &&,||,! "
+   - it returns boolean value
+5. Increment and Decrement opeartors - " ++,-- "
+6. Short hand operators - x = x+y => x+=y
+7. Ternary operators 
+    - condition? true:false
+8. Truthy operator  - used when there is only if case and there are no else case
+    - condition && Truestatement
+
+conditional statements / Decision making statements
+----------------------------------------------------
+1. if else
+   -------
+   if(condition){
+     statment
+   }
+   else{
+     statement
+   }
+2. switch case
+
+looping statements - to do a task repeatedly at a position of a programing file
+------------------
+1 while loop
+
+   syntax
+   ------
+   variable initialization
+   while(condition){
+      statment
+      exit condition / increment or decreament 
+   }
+   used when we dont know exact number of iterations
+   
+2 for loop
+  
+  syntax
+  ------
+  for(variable initialization;condition;increment/decrement){
+   statements
+  }
+  used when we know exact number of iterations
+
+note
+----
+
+for adding a string + number - type conversion should be done.
+Number(str) 
+
+break - inorder to forcfully exit a loop
+
+pattern printing - nested looping
+----------------
+
+functions
+---------
+To do a certain task repeatedly at diffrnt locations of the programming file.
+- function have 2 parts
+ 1, function defintion
+ 2, function call
+
+ syntax
+ ------
+ function functionname(){
+   statement
+ }
+
+ functionname()
+
+ variables inside a function is having functional scope. - can access only inside the function 
+ return - inorder to access variable outside the function
+ statements after the return statemnts will not execute.
+
+ arrow function
+ --------------
+ ES6 - version onwwards - arrow function is preffered
+
+ syntax
+ ------
+ const variablename = ()=>{
+   statements
+ }
+
+ variablename()
+
+ if there is only 1 statemnt the we can romve the curly bracket and return is done automatically.these steps can be ommited
+// for the same reason arrow function is preffered from ES6
+
+functional hoisting
+-------------------
+posibble in regular function
+not possible in arrow function
+
+callback functions
+------------------
+A function calling another function 
+call back functions are passed as arguments to another function and is excuted after the function completes its executon
+
+predefined functions
+---------------------
+eg parseint,consol.log,math.floor
+
+Nested function
+---------------
+A function defined inside another function 
+
+closure property
+----------------
+Variables inside a parent function can be accesed inside a child fun ction but the variables inside the child function cannot be accesd inside the parent function
+
+Synchronous and Asynchronous
+----------------------------
+Synchronous function - Functions without any time delay
+Asynchronous Function - Functions with time delay eg : Api,setTime/Out()
+
+DataStructure
+-------------
+A specilized format for organizing ,processing,retreiving and storing data.
+eg Array,stack,queue,list ,linkedkist
+
+Array
+-----
+Unlike variables array can store more than 1 data of diffrnt datatype that are seperated by comas and enclosed within a square bracket 
+arrayname = [data1,data2,...]
+
+key:value pairs data is stored
+key = index value - 0 to length -1 of that array
+value = data 
+
+Array operations
+----------------
+1. get - using index locations
+2. add - push()
+       - push() is used to add items as the last element of an array
+3. unshift() - add items to an array as first element
+4. pop() - to delete the last item from an array
+5. shift() - To remove the first item from an array
+6. splice(startng index,no of items,items...) - remove and add items of an array at diffent locations
+7. sort() - To arrange the given array in ascending or descending order
+   //ascending - array.sort((a,b)=>a-b)    //a-b means first argumnt to second argument
+   //descending - array.sort((a,b)=>b-a)
+8. flat() - reduce the dimension eg : 2d to 1d
+9. flat(depth) - reduce any dimension directly to 1 dimension eg: suppose arr is 3d then
+                                                                  arr.flat(2) will make arr 1d
+   for easiness we can give depth as Infinity so that we do not have to count the no of dimension
+                                                               eg: arr.flat(Infinite)
+10. foreach() - used to access each items from a given array
+11. map() - used to access each elemnt from a given array and return a new array with same number of elemnt that of    the parent array
+12. reduce() - return a single value from the given array
+    eg sum,highest,small 
+13. filter() - It returns a new array with all elemnts satisfying a particular condition 
+14. find() - It retuns the first elemnt that satisfying a paricular condition
+15. some() - To check the given condition is true or false
+16. includes(item) - return boolean value based on the item
+17. indexOf() - index of a particular item
+18. slice() - create a sub array(start index ,last index+1) 
+19. reduceRight()
+20. lastIndexOf()
+
+differnt way to access items from an array
+-----------------------------------------
+1. for loop
+2. in  - can access the indexes of an array
+3. of  - can access the items directly of an array
+
+nested array - array inside another array 
+
+string 
+------
+sequence of characters
+
+methods
+------
+1. startsWith() - Check whether given string starts with a particular character - it returns true or false boolean values,case sensitive
+2. endsWith() - Check whether given string ends with a particular character - it returns true or false boolean values,    case sensitive
+3. toUpperCase() - converts the given string into capital letters
+4. toLowerCase() - converts the given string into small letters 
+5. substring(startindex,endIndex) - to create substring
+   ending index is excluded
+6. slice(startindex,endIndex)
+7. trim() - remove space at the end 
+8. split(seperator) - return a newArray have the elementdivide based on the seperator
+9. replace() - it replace first matching content 
+10. replaceAll() - it replace all matching content
+11. Array.from() - creates a new array from an iterable or array-like object. It allows you to convert things like strings, sets, maps, or objects with a length property into an array.
+
+objects
+-------
+This also used to store more than 1 data of different data type that are sperated by comas and enclosed within curly bracket 
+unlike array the stored data have more clarity 
+
+object operations
+----------------
+1. add - 
+    objectname['key'] = value
+    object.assign(objectname,{key:value})
+
+2.update 
+    objectname['key'] = value 
+
+3. delete
+   delete objectname.key 
+

@@ -1,0 +1,46 @@
+javascript
+----------
+
+features
+--------
+
+used in both front end(browser) and backend(node js environment )
+js - behaviour - frontend
+   - logical operation -backend
+it supports both procedural programmng paradigm and object oriented progrming(oops)
+single thread programming language - line by line execution
+
+display
+-------
+console.log(content)
+
+data types in js
+----------------
+
+generally there are 2 data types -
+1 primitive datatype - immutable datatype - 
+eg , x=hello
+     x=Hello  can be reassigned but not be changed
+
+     1 string - represents sequence of characters enclosed in single,double quotes
+     2 number - represents both integer a well as floatig point numbers
+     3 Boolean - represents logcal values (true or false)
+     4 BigInt - represents larger number which comes outside the limit of number datatypes
+     5 Null - reprents intensional absence of value
+     6 undefined - variable is declared but value is not assigned
+     7 symbol - generate unique identifiers
+              - symbol()
+              - basically used in creatng libraries and modules based on js
+2 non-primitive datatype - mutable
+     8 object - reprented using key:value pairs
+     eg ; object,array,functions
+
+variable
+--------
+used to store data
+identifiers - rules to create a variable
+     1. variable name can have letters ,digits,underscore ext 
+     2. name should not start with digits 
+     3. no white space between 2 words of  variable name 
+
+

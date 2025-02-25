@@ -1,0 +1,29 @@
+object oriented programming system (Oops)
+---------------------------------------
+
+its a programing paradigm which consider real time entities into objects and class.
+
+basic 
+-----
+class - Blueprint which contains common features from which different objects can be created 
+object - its a real time entity created from class
+reference - The memory location in which properties and methods are stored.
+
+proprties - variables inside a class 
+methods - functions inside a class
+instance variable 
+
+syntax
+------
+
+class classname{
+    1,properties 
+    2,constructors - used to initialize properties 
+    3,methods
+}
+
+syntax 
+------
+const objectname = new classname() //instance or object is created 
+
+it is not mandatory to place properties ,methods and constructors together in every class 
