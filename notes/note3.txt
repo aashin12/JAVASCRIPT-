@@ -27,3 +27,23 @@ syntax
 const objectname = new classname() //instance or object is created 
 
 it is not mandatory to place properties ,methods and constructors together in every class 
+
+this - instance variable 
+
+pillars of oops 
+--------------
+1,Inheritance
+ - Used to access properties and methods from one class to another
+ - Parent class/super class/base class
+ - Child class/sub class/derived class
+ - keyword - extends 
+ - Types - simple,multilevel,
+
+
+ object Inheritance 
+ ------------------
+ keyword = __proto__
+
+2,Polymorphism - 
+3,Abstraction
+4,Encapsulation
