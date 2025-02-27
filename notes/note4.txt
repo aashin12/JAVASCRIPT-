@@ -1,0 +1,43 @@
+Javascript in Front end
+-----------------------
+
+- js in the front end is used to provide behaviours to web application.
+- Browser - Its an application which provides an interface to communicate with the resources available in the internet.
+(chrome,edge,opera)
+- Browser Engine - html ,css,javascript
+- Javascript - DOM - Document object model
+                   - created by browser 
+                   - Tree structure of html document 
+
+How to apply js in html document
+--------------------------------
+1, internal apply 
+   - <script>
+   -  js code
+   </script>
+   - head - after body
+2, external apply
+   - filename.js
+   - <script src = 'path></script>
+
+Different way to access DOM
+---------------------------
+1, document.getElementByTagname() - Returns html collection (Array)
+2, document.getElementByClassname()
+3, document.getElementById()
+4, document.querySelector()
+5, document.querySelectorAll()
+
+
+change the content in html document
+-----------------------------------
+ .innerHTML()
+
+ Events : Action performed by the user to update the Dom
+Eg:
+ click
+ change
+ keydown
+ submit
+ load
+

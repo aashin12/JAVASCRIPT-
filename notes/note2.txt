@@ -176,7 +176,7 @@ To do a certain task repeatedly at diffrnt locations of the programming file.
  if there is only 1 statemnt the we can romve the curly bracket and return is done automatically.these steps can be ommited
 // for the same reason arrow function is preffered from ES6
 
-functional hoisting
+functional hoisting 
 -------------------
 posibble in regular function
 not possible in arrow function
@@ -188,7 +188,7 @@ call back functions are passed as arguments to another function and is excuted a
 
 predefined functions
 ---------------------
-eg parseint,consol.log,math.floor
+eg parseInt,consol.log,math.floor,eval()
 
 Nested function
 ---------------

@@ -18,7 +18,7 @@ syntax
 
 class classname{
     1,properties 
-    2,constructors - used to initialize properties 
+    2,constructors - used to initialize properties ,self invoke when object is created
     3,methods
 }
 
@@ -44,6 +44,31 @@ pillars of oops
  ------------------
  keyword = __proto__
 
-2,Polymorphism - 
+2,Polymorphism - ability to attain in more than one format
+               - method overloading - methods with same name but different arguments - executes based on the argument
+                                    - js does not support directly
+                                    - rest operator(...) - arguments are returned as an array 
+               - method overriding  - method with same name with same argument - then last written method will execute
 3,Abstraction
-4,Encapsulation
+4,Encapsulation  
+
+Exception Handling
+------------------
+- exception  - Run time errors
+- exceptions are handles with the help of try-catch block
+
+syntax
+------
+try{
+    statemnt that might cause errorrs
+}
+catch{
+    statemnt to execute in case of errors 
+}
+
+finally{
+    statemnt that need to be executed in both cases 
+}
+
+eval() - used to solve expression 
+
