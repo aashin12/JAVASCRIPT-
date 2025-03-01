@@ -23,10 +23,10 @@ How to apply js in html document
 Different way to access DOM
 ---------------------------
 1, document.getElementByTagname() - Returns html collection (Array)
-2, document.getElementByClassname()
-3, document.getElementById()
-4, document.querySelector()
-5, document.querySelectorAll()
+2, document.getElementByClassname() - Return html collection of all tags with same class name
+3, document.getElementById() - Return directly the element
+4, document.querySelector() - //tag , //#id , //.class - Return the first matching element 
+5, document.querySelectorAll() - Return all the matching elelmnts as nodelist(array)
 
 
 change the content in html document

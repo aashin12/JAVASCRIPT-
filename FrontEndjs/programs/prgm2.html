@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ACCESS</title>
+    <style>
+        h1{
+            color: rgb(108, 19, 3);
+        }
+        button{
+            padding: 10px;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <h1 class="styl1">Sample</h1>
+    <p class="styl1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia iure dolorem ducimus quibusdam, aliquid dolore nihil voluptatum quis ea fuga dignissimos enim numquam! Cum ex voluptatibus temporibus aut rerum.</p>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolores voluptas temporibus numquam ullam culpa quod nemo quaerat eum recusandae corrupti illo aspernatur, mollitia error velit fugit sequi dolore? Voluptate.</p>
+    <button onclick="change()">click</button>
+</body>
+<script>
+    function change() {
+        // const content = document.getElementsByTagName('h1')
+        // console.log(content[1]);
+        // content[0].innerHTML = "Document object model"
+        // content[1].style.fontSize = "100px"
+        // const content = document.getElementsByClassName('styl1')
+        // console.log(content[1]);
+        // content[1].style.backgroundColor = "yellow"
+        
+        // const data = document.getElementById('para')
+        // console.log(data);
+        // data.style.backgroundColor='red'
+        
+        const data = document.querySelectorAll('h1')
+        console.log(data);
+        data[1].style.backgroundColor= 'blue'
+        
+    }
+</script>
+</html>
