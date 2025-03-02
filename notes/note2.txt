@@ -267,7 +267,7 @@ methods
 4. toLowerCase() - converts the given string into small letters 
 5. substring(startindex,endIndex) - to create substring
    ending index is excluded
-6. slice(startindex,endIndex)
+6. slice(startindex,endIndex) -startindex(inclusive) endindex(exclusive)
 7. trim() - remove space at the end 
 8. split(seperator) - return a newArray have the elementdivide based on the seperator
 9. replace() - it replace first matching content 
