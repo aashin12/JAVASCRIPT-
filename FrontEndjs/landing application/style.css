@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-image: url('https://cdn.britannica.com/88/238488-138-CF22D7D8/what-is-net-neutrality.jpg?w=800&h=450&c=crop');
+    width: 100%;
+    height: 400rem;
+    /* background-size: cover; */
+}
+    
