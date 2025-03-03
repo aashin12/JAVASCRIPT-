@@ -41,3 +41,14 @@ Eg:
  submit
  load
 
+ Database
+ --------
+ - It is used to store data 
+ - Large amount of data
+
+ - Browser storage
+   ---------------
+   - limit amount of data
+   - different types of browser storage
+      1, local storage - Permanent storage
+      2, Session storage - Temporary storage - data will be lost when the session is closed 

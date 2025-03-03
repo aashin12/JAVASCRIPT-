@@ -67,7 +67,7 @@
     </style>
 </head>
 <body>
-    <h1>Calculator</h1>
+    <h1  style="font-size: 50px;">Calculator</h1>
     <div class="calculator">
         <div class="display-container">
             <input type="text" class="display" id="display" value="0" disabled>
@@ -104,45 +104,8 @@
             </tr>
         </table>
     </div>
-    <script>
-        function appendValue(value) {
-            let display = document.getElementById('display');
-            if (display.value === '0')
-            {
-                display.value = value;
-            }
-             else if(display.value=='Error')
-            {
-              display.value = value
-            }
-            else
-            {
-                display.value += value;
-            }
-        }
-
-        function clearDisplay() {
-            document.getElementById('display').value = '0';
-        }
-
-        function deleteLast() {
-            let display = document.getElementById('display');
-            if(display.value!='Error')
-            display.value = display.value.slice(0, -1) || '0';
-            else
-            display.value = '0'
-
-        }
-
-        function calculateResult() {
-            try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
-            } catch (e) {
-                document.getElementById('display').value = 'Error';
-                
-            }
-        }
-    </script>
+    
 </body>
+<script src="./script.js"></script>
 </html>
 
