@@ -52,3 +52,11 @@ Eg:
    - different types of browser storage
       1, local storage - Permanent storage
       2, Session storage - Temporary storage - data will be lost when the session is closed 
+
+operations
+----------
+1, add - setItem("key","value")
+  - json.stringfy() - To convert the data into string 
+2, retrieve data - getItem("Key")
+  - json.parse() - To convert string into object 
+3, delete an item - removeItem("key")

@@ -14,14 +14,14 @@
         <div class="container-fluid">
             <button class="btn btn-outline-light"><i class="fas fa-bars"></i></button>
             <a class="navbar-brand">Dashboard</a>
-            <button class="btn logout-btn ms-auto">Logout <i class="fas fa-power-off"></i></button>
+            <button type="button" class="btn logout-btn ms-auto" onclick="logout()">Logout <i class="fas fa-power-off"></i></button>
         </div>
     </nav>
 
     <div class="banner"></div>
 
     <div class="content">
-        <h2>Welcome <span>Anu</span></h2>
+        <h2>Welcome <span id="username">Aashin</span></h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, praesentium modi! Rem numquam inventore et consequuntur illum a exercitationem, sequi, sunt est possimus eligendi pariatur nobis facilis iusto suscipit fugit.
         Eaque ab est voluptatum soluta nemo excepturi numquam a maxime ut, voluptas sit. Aut voluptates exercitationem excepturi quia dolores. Natus quas aperiam quisquam, eos libero et sequi repellendus ex commodi?
         Consectetur dicta earum velit, excepturi rerum optio reiciendis ex voluptatum ratione modi! Quam, culpa. Animi officiis mollitia similique autem enim, vitae recusandae sapiente, praesentium optio perspiciatis eligendi voluptatum vel. Accusamus!
@@ -30,5 +30,20 @@
     </div>
 
 </body>
+<script>
+    let user = localStorage.getItem('user')
+
+    if(!user){
+        alert('please login')
+        window.location='login.html'
+    }
+    username.innerHTML = user
+
+
+    function logout(){
+        localStorage.removeItem('user')
+        window.location = 'login.html'
+    }
+</script>
 </html>
 
