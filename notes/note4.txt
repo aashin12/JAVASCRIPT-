@@ -60,3 +60,71 @@ operations
 2, retrieve data - getItem("Key")
   - json.parse() - To convert string into object 
 3, delete an item - removeItem("key")
+
+API 
+---
+- application programming interface
+- application which provides an intrface to communicate btw the resources vailable in the intrnet 
+
+http
+----
+- Hypertext transfer protocol - Set of Rules that should be followed while communicating btw the resources.
+
+request header - imp data(like wht to do,content type,token(authorization))
+request body - data (data we have collected from the user)
+
+methods
+-------
+1, post - To add a data
+2, get  - To retrieve data
+3, put  - To update the data
+4, delete - To remove a data 
+
+JSON 
+----
+- javascript object notation
+- it is format for sharing data between two applications 
+- {
+   'key':value
+  }
+- This format is used becz it is compatibility across different platforms and programming languages.
+
+URL - uniform resource locator
+---
+- address of the resource in the internet.
+
+response from server side(acknowledgemnt for client request)
+--------
+1, 1xx (100-199) - information
+2, 2xx (200-299) - success response
+3, 3xx (300-399) - Redirection
+4, 4xx (400-499) - clientside error
+5, 5xx (500-599) - Serverside error 
+
+Architecture - RESTful api 
+
+types of api 
+------------
+1, public api - free available,easy access data
+2, private api - secure - only the partner having the api key can access
+3, composite api - combination of public and private api 
+
+Api tools 
+---------
+1, thunder client - vs code extension (test the request from frnt end to backend)
+2, postman - real tool 
+
+API 
+---
+1, AJAX - asynchronous javascript xml 
+  ------------------------------------
+  -XMLHttpRequest() - class 
+  - 1, create an instance for the class
+       const obj = new XMLHttpRequest()
+  - 2, open() - to connect with the application
+       obj.open()
+  - 3, send() - to send the request        //need to give body for  post and update, for 'get' we dont have to give
+  - readyState - property inside the class - changes from 1 to 4
+
+2, fetch
+3, async await 
