@@ -118,7 +118,8 @@ API
 ---
 1, AJAX - asynchronous javascript xml 
   ------------------------------------
-  -XMLHttpRequest() - class 
+  AJAX (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a server asynchronously without reloading the webpage.
+  1, XMLHttpRequest() - class 
   - 1, create an instance for the class
        const obj = new XMLHttpRequest()
   - 2, open() - to connect with the application
@@ -128,3 +129,11 @@ API
 
 2, fetch
 3, async await 
+
+ How is AJAX Asynchronous?
+AJAX allows web applications to fetch or send data in the background while the user continues interacting with the page.
+When an AJAX request is made asynchronously, the browser does not wait for the response and continues executing the next lines of code.
+
+What if AJAX was Synchronous?
+If AJAX was synchronous, the script would pause execution until the response arrives.
+Issue: The entire script pauses until the data is fetched, causing performance issues,page freezes.
