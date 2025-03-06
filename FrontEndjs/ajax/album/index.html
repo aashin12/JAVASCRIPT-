@@ -1,0 +1,93 @@
+<!-- fetch -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .album-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .album-card {
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            width: calc(50% - 15px);
+            text-align: left;
+        }
+        .album-card:hover {
+            transform: scale(1.05);
+        }
+        .album-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .album-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .album-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>User Albums</h2>
+    <div class="container">
+        <div id="result" class="album-row"></div>
+    </div>
+    
+</body>
+
+<script>
+    fetch('https://jsonplaceholder.typicode.com/albums').then((response) => response.json())
+        .then(albums => {
+            console.log(albums);
+            
+            albums.forEach(album => {
+                result.innerHTML += `
+                    <div class="album-card">
+                        <div class="album-title">Album ID: ${album.id}</div>
+                        <div class="album-subtitle">User ID: ${album.userId}</div>
+                        <p>${album.title}</p>
+                    </div>`;
+            });
+        })
+        .catch(error => console.error('Error fetching albums:', error));
+</script>
+</html>

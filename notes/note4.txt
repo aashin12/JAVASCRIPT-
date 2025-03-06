@@ -119,7 +119,7 @@ API
 1, AJAX - asynchronous javascript xml 
   ------------------------------------
   AJAX (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a server asynchronously without reloading the webpage.
-  1, XMLHttpRequest() - class 
+     XMLHttpRequest() - class 
   - 1, create an instance for the class
        const obj = new XMLHttpRequest()
   - 2, open() - to connect with the application
