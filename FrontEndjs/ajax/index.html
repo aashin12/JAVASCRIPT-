@@ -1,3 +1,5 @@
+<!-- XMLHttpRequest() -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,14 @@
                             <th class="bg-info p-3 text-white">Completed</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="result">
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div class="col-md-3"></div>
@@ -51,10 +60,25 @@
           console.log('data');
           if(http.status>=200 && http.status<300){
             console.log('response');
-            console.log(http.responseText);
             
+            let alltodos = JSON.parse(http.responseText)
+            console.log(alltodos);
+
+            alltodos.forEach((item) => {
+                        result.innerHTML += 
+                       ` <tr>
+                            <td style="color: red;">${item.userId}</td>
+                            <td>${item.id}</td>
+                            <td>${item.title}</td>
+                            <td>${item.completed}</td>
+                        </tr> `
+                        
+                        
+            })
+                    
             
-          }else{
+        }
+        else{
             console.log('error');
             
           }

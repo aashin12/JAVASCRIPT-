@@ -58,13 +58,13 @@ operations
 1, add - setItem("key","value")
   - json.stringfy() - To convert the data into string 
 2, retrieve data - getItem("Key")
-  - json.parse() - To convert string into object 
+  - json.parse() - To convert string into object (back to real storage)
 3, delete an item - removeItem("key")
 
 API 
 ---
 - application programming interface
-- application which provides an intrface to communicate btw the resources vailable in the intrnet 
+- application which provides an intrface to communicate btw the resources available in the intrnet 
 
 http
 ----
@@ -127,8 +127,7 @@ API
   - 3, send() - to send the request        //need to give body for  post and update, for 'get' we dont have to give
   - readyState - property inside the class - changes from 1 to 4
 
-2, fetch
-3, async await 
+
 
  How is AJAX Asynchronous?
 AJAX allows web applications to fetch or send data in the background while the user continues interacting with the page.
@@ -137,3 +136,17 @@ When an AJAX request is made asynchronously, the browser does not wait for the r
 What if AJAX was Synchronous?
 If AJAX was synchronous, the script would pause execution until the response arrives.
 Issue: The entire script pauses until the data is fetched, causing performance issues,page freezes.
+
+2, fetch 
+  - ES6 - fetch is preferred
+  - Promise() - it is a class used to handle asynchronous functions.
+  -it have three states
+    1, resolve state - 200 - then()
+    2, pending state
+    3, reject state  - catch()
+
+3, async await 
+
+hw in placeholder
+comments with AJAX
+and albums with fetch
