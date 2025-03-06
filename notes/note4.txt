@@ -129,7 +129,7 @@ API
 
 
 
- How is AJAX Asynchronous?
+How is AJAX Asynchronous?
 AJAX allows web applications to fetch or send data in the background while the user continues interacting with the page.
 When an AJAX request is made asynchronously, the browser does not wait for the response and continues executing the next lines of code.
 
