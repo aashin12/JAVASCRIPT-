@@ -116,6 +116,8 @@ Api tools
 
 API 
 ---
+API Techniques :-
+
 1, AJAX - asynchronous javascript xml 
   ------------------------------------
   AJAX (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a server asynchronously without reloading the webpage.
@@ -147,6 +149,7 @@ Issue: The entire script pauses until the data is fetched, causing performance i
 
 3, async await 
 
-hw in placeholder
-comments with AJAX
-and albums with fetch
+   advantages
+   ----------
+   1, reduction of then method
+   2, can store the result into a variable

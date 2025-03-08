@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* background: linear-gradient(135deg, #2c3e50, #000000); */
+            background-image: url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .card {
+            background: #3a3a3a;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 50rem;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+        }
+        .btn-primary {
+            background: #555555;
+            border: none;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background: #222222;
+        }
+        .form-control {
+            background: #444;
+            color: white;
+            border: 1px solid #666;
+        }
+        .form-control::placeholder {
+            color: #bbb;
+        }
+        .country-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .details-left, .details-right {
+            width: 45%;
+        }
+        .flag-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="mb-3 mt-5 text-white">Know About The Country</h1>
+        <input type="text" id="countryInput" class="form-control mb-3" placeholder="Enter country name">
+        <button class="btn btn-primary" onclick="searchCountry()">Search</button>
+        <div id="countryCard" class="mt-4 mb-4"></div>
+    </div>
+
+    <script>
+        function searchCountry() {
+            let countryName = document.getElementById("countryInput").value;
+            if (!countryName) {
+                alert("Please enter a country name");
+                return;
+            }
+            fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+                .then(response => response.json())
+                .then(data => {
+                    let country = data[0];
+                    document.getElementById("countryCard").innerHTML = `
+                        <div class="card mx-auto ">
+                            <div class="country-details">
+                                <div class="details-left">
+                                    <h3 class="text-center">${country.name.common}</h3>
+                                    <img src="${country.flags.png}" class="flag-img mb-4" alt="Flag">
+                                    <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
+                                    <p><strong>Region:</strong> ${country.region}</p>
+                                </div>
+                                <div class="details-right">
+                                    <p><strong>Subregion:</strong> ${country.subregion}</p>
+                                    <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+                                    <p><strong>Languages:</strong> ${Object.values(country.languages || {}).join(", ")}</p>
+                                    <p><strong>Currency:</strong> ${Object.values(country.currencies || {}).map(c => c.name).join(", ")}</p>
+                                    <p><strong>Timezones:</strong> ${country.timezones.join(", ")}</p>
+                                    <p><strong>Area:</strong> ${country.area.toLocaleString()} km²</p>
+                                    <p><strong>Calling Code:</strong> +${Object.values(country.idd?.root + (country.idd?.suffixes ? country.idd.suffixes[0] : ""))}</p>
+                                    <p><strong>Bordering Countries:</strong> ${country.borders ? country.borders.join(", ") : 'None'}</p>
+                                    <p><strong>Driving Side:</strong> ${country.car.side}</p>
+                                </div>
+                            </div>
+                        </div>`;
+                })
+                .catch(error => {
+                    alert("Country not found!");
+                });
+        }
+    </script>
+</body>
+</html>

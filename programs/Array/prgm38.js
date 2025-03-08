@@ -9,7 +9,7 @@ console.log(`--------------------------------`);
 
 for(let x in fruits)
 {
-    console.log(fruits[x]);
+    console.log(x);
     
 }
 

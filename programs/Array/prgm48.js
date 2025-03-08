@@ -29,3 +29,5 @@ console.log(`----------------------------`);
 arr=[[1,2],[3,4],[5,6]]
 k=arr.flat(Infinity)
 console.log(k);
+console.log(k[2]);
+
