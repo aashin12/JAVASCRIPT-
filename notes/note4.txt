@@ -153,3 +153,10 @@ Issue: The entire script pauses until the data is fetched, causing performance i
    ----------
    1, reduction of then method
    2, can store the result into a variable
+   3, it helps the asynchronous function to behave like a synchronous function - therefore it can avoid call back hell.
+
+async - The function which contains api call
+await - where api is coming / which is the api call
+
+note :it helps such that it stores 'then' result into a variable
+also await does not exist without async

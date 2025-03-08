@@ -61,49 +61,86 @@
 <body>
     <div class="container text-center">
         <h1 class="mb-3 mt-5 text-white">Know About The Country</h1>
-        <input type="text" id="countryInput" class="form-control mb-3" placeholder="Enter country name">
-        <button class="btn btn-primary" onclick="searchCountry()">Search</button>
+        <input type="text" id="countryname" class="form-control mb-3" placeholder="Enter country name">
+        <button type="button" class="btn btn-primary" onclick="search()">Search</button>
         <div id="countryCard" class="mt-4 mb-4"></div>
     </div>
 
     <script>
-        function searchCountry() {
-            let countryName = document.getElementById("countryInput").value;
-            if (!countryName) {
+        const search = async()=>{
+            // console.log(countryname.value);
+            if (!countryname.value) {
                 alert("Please enter a country name");
                 return;
             }
-            fetch(`https://restcountries.com/v3.1/name/${countryName}`)
-                .then(response => response.json())
-                .then(data => {
-                    let country = data[0];
-                    document.getElementById("countryCard").innerHTML = `
-                        <div class="card mx-auto ">
-                            <div class="country-details">
+            
+        let response = await fetch(`https://restcountries.com/v3.1/name/${countryname.value}?fullText=true`)
+         
+        response.json().then((data)=>{
+            console.log(data);
+            //common
+            let common = data[0].name.common 
+            console.log(common);
+            //official
+            let official = data[0].name.official
+            console.log(official);
+            //capital
+            let capital = data[0].capital 
+            console.log(capital);
+            //continents
+            let continents = data[0].continents
+            console.log(continents);
+            //borders
+            let borders =data[0].borders
+            console.log(borders);
+            //maps
+            let map = data[0].maps.googleMaps
+            console.log(map);
+            //area
+            let area = data[0].area
+            console.log(area);
+            //population
+            let population = data[0].population
+            console.log(population);
+            //timezone
+            let timezone = data[0].timezones
+            console.log(timezone);
+            //flag
+            let flag = data[0].flags.png
+            console.log(flag);
+            //currency
+            let currencies = Object.values(data[0].currencies || {}).map(c => `${c.name} (${c.symbol})`).join(", ");
+            //languages
+            let languages = Object.values(data[0].languages || {}).join(", ");
+            
+                              countryCard.innerHTML = `
+                              <div class="card mx-auto ">
+                              <div class="country-details">
                                 <div class="details-left">
-                                    <h3 class="text-center">${country.name.common}</h3>
-                                    <img src="${country.flags.png}" class="flag-img mb-4" alt="Flag">
-                                    <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
-                                    <p><strong>Region:</strong> ${country.region}</p>
+                                    <h3 class="text-center">${common}</h3>
+                                    <img src="${flag}" class="flag-img mb-4" alt="Flag">
+                                    <p><strong>Official:</strong> ${official}</p>
+                                    
                                 </div>
                                 <div class="details-right">
-                                    <p><strong>Subregion:</strong> ${country.subregion}</p>
-                                    <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-                                    <p><strong>Languages:</strong> ${Object.values(country.languages || {}).join(", ")}</p>
-                                    <p><strong>Currency:</strong> ${Object.values(country.currencies || {}).map(c => c.name).join(", ")}</p>
-                                    <p><strong>Timezones:</strong> ${country.timezones.join(", ")}</p>
-                                    <p><strong>Area:</strong> ${country.area.toLocaleString()} km²</p>
-                                    <p><strong>Calling Code:</strong> +${Object.values(country.idd?.root + (country.idd?.suffixes ? country.idd.suffixes[0] : ""))}</p>
-                                    <p><strong>Bordering Countries:</strong> ${country.borders ? country.borders.join(", ") : 'None'}</p>
-                                    <p><strong>Driving Side:</strong> ${country.car.side}</p>
+                                    <p><strong>Capital:</strong> ${capital}</p>
+                                    <p><strong>Continents:</strong> ${continents}</p>
+                                    <p><strong>Borders:</strong> ${borders}</p>
+                                    <p><strong>Population:</strong> ${population}</p>
+                                    <p><strong>Map: </strong><a href="${map}">${map}</a></p>
+                                    <p><strong>Area:</strong> ${area}</p>
+                                    <p><strong>Timezone:</strong> ${timezone}</p>
+                                    <p><strong>Currency:</strong> ${currencies}</p>
+                                    <p><strong>Languages:</strong> ${languages}</p>
+                                    
                                 </div>
                             </div>
                         </div>`;
-                })
-                .catch(error => {
-                    alert("Country not found!");
-                });
+              
+                    })
+          
         }
     </script>
+    
 </body>
 </html>
