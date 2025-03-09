@@ -2,10 +2,12 @@
 
 num = 9
 
-if(num%2==0){
-console.log(`The num is even`);
+// if(num%2==0){
+// console.log(`The num is even`);
 
-}else{
-    console.log(`The sum is odd`);
+// }else{
+//     console.log(`The sum is odd`);
     
-}
+// }
+
+console.log(num%2==0?`even`:`odd`);
