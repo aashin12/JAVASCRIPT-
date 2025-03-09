@@ -18,7 +18,9 @@ data types in js
 ----------------
 
 generally there are 2 data types -
-1 primitive datatype - immutable datatype - 
+1 primitive datatype - immutable datatype - (Cannot be changed)
+ - Creates a new value
+ - Creates new memory allocation 
 eg , x=hello
      x=Hello  can be reassigned but not be changed
 
@@ -31,7 +33,9 @@ eg , x=hello
      7 symbol - generate unique identifiers
               - symbol()
               - basically used in creatng libraries and modules based on js
-2 non-primitive datatype - mutable
+2 non-primitive datatype - mutable - (Can be changed)
+ - Mutable data types allow modifications to their values without creating a new reference in memory.
+ - Modifies existing value
      8 object - reprented using key:value pairs
      eg ; object,array,functions
 
@@ -41,6 +45,6 @@ used to store data
 identifiers - rules to create a variable
      1. variable name can have letters ,digits,underscore ext 
      2. name should not start with digits 
-     3. no white space between 2 words of  variable name 
+     3. no white space between 2 words of variable name 
 
 

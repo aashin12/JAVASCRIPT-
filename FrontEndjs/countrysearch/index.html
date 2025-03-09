@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             align-items: center;
             flex-direction: column;
         }
+
         .card {
             background: #3a3a3a;
             color: white;
@@ -23,34 +25,43 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             width: 50rem;
         }
+
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
         }
+
         .btn-primary {
             background: #555555;
             border: none;
             transition: background 0.3s ease-in-out;
         }
+
         .btn-primary:hover {
             background: #222222;
         }
+
         .form-control {
             background: #444;
             color: white;
             border: 1px solid #666;
         }
+
         .form-control::placeholder {
             color: #bbb;
         }
+
         .country-details {
             display: flex;
             justify-content: space-between;
             padding: 20px;
         }
-        .details-left, .details-right {
+
+        .details-left,
+        .details-right {
             width: 45%;
         }
+
         .flag-img {
             width: 100%;
             border-radius: 10px;
@@ -58,6 +69,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container text-center">
         <h1 class="mb-3 mt-5 text-white">Know About The Country</h1>
@@ -67,53 +79,68 @@
     </div>
 
     <script>
-        const search = async()=>{
+        const search = async () => {
             // console.log(countryname.value);
             if (!countryname.value) {
                 alert("Please enter a country name");
                 return;
             }
-            
-        let response = await fetch(`https://restcountries.com/v3.1/name/${countryname.value}?fullText=true`)
-         
-        response.json().then((data)=>{
-            console.log(data);
-            //common
-            let common = data[0].name.common 
-            console.log(common);
-            //official
-            let official = data[0].name.official
-            console.log(official);
-            //capital
-            let capital = data[0].capital 
-            console.log(capital);
-            //continents
-            let continents = data[0].continents
-            console.log(continents);
-            //borders
-            let borders =data[0].borders
-            console.log(borders);
-            //maps
-            let map = data[0].maps.googleMaps
-            console.log(map);
-            //area
-            let area = data[0].area
-            console.log(area);
-            //population
-            let population = data[0].population
-            console.log(population);
-            //timezone
-            let timezone = data[0].timezones
-            console.log(timezone);
-            //flag
-            let flag = data[0].flags.png
-            console.log(flag);
-            //currency
-            let currencies = Object.values(data[0].currencies || {}).map(c => `${c.name} (${c.symbol})`).join(", ");
-            //languages
-            let languages = Object.values(data[0].languages || {}).join(", ");
-            
-                              countryCard.innerHTML = `
+
+            let response = await fetch(`https://restcountries.com/v3.1/name/${countryname.value}?fullText=true`)
+
+            response.json().then((data) => {
+                console.log(data);
+                //common
+                let common = data[0].name.common
+                console.log(common);
+                //official
+                let official = data[0].name.official
+                console.log(official);
+                //capital
+                let capital = data[0].capital
+                console.log(capital);
+                //continents
+                let continents = data[0].continents
+                console.log(continents);
+                //borders
+                let borders = data[0].borders
+                console.log(borders);
+                //maps
+                let map = data[0].maps.googleMaps
+                console.log(map);
+                //area
+                let area = data[0].area
+                console.log(area);
+                //population
+                let population = data[0].population
+                console.log(population);
+                //timezone
+                let timezone = data[0].timezones
+                console.log(timezone);
+                //flag
+                let flag = data[0].flags.png
+                console.log(flag);
+                //currency
+                let currency = "";
+                for (let key in data[0].currencies) {
+                if (currency) {
+                    currency += ", ";
+                }
+                let currencyName = data[0].currencies[key].name;
+                let currencySymbol = data[0].currencies[key].symbol;
+                currency += `${key} - ${currencyName} (${currencySymbol})`; // Example: "INR - Indian Rupee (₹)"
+            }
+                //languages
+                let language = "";
+                for (let key in data[0].languages) {
+                    if (language) {
+                        language += ", ";
+                    }
+                    language += data[0].languages[key]; // Extracts language names
+                }
+               
+
+                countryCard.innerHTML = `
                               <div class="card mx-auto ">
                               <div class="country-details">
 
@@ -123,25 +150,30 @@
                                     <p><strong>Official:</strong> ${official}</p>    
                                 </div>
 
-                                <div class="details-right">
-                                    <p><strong>Capital:</strong> ${capital}</p>
-                                    <p><strong>Continents:</strong> ${continents}</p>
-                                    <p><strong>Borders:</strong> ${borders}</p>
-                                    <p><strong>Population:</strong> ${population}</p>
-                                    <p><strong>Map: </strong><a href="${map}">${map}</a></p>
-                                    <p><strong>Area:</strong> ${area}</p>
-                                    <p><strong>Timezone:</strong> ${timezone}</p>
-                                    <p><strong>Currency:</strong> ${currencies}</p>
-                                    <p><strong>Languages:</strong> ${languages}</p>   
+                                <div class="details-right ">
+                                    <p class='text-start'><strong>Capital:</strong> ${capital}</p>
+                                    <p class='text-start'><strong>Continents:</strong> ${continents}</p>
+                                    <p class='text-start'><strong>Borders:</strong> ${borders}</p>
+                                    <p class='text-start'><strong>Population:</strong> ${population}</p>
+                                    <p class='text-start'><strong>Map: </strong><a href="${map}">${map}</a></p>
+                                    <p class='text-start'><strong>Area:</strong> ${area}</p>
+                                    <p class='text-start'><strong>Timezone:</strong> ${timezone}</p>
+                                    <p class='text-start'><strong>Currency:</strong> ${currency}</p>
+                                    <p class='text-start'><strong>Languages:</strong> ${language}</p> 
+                                    
+                                    
+
+
                                 </div>
                                 
                             </div>
                         </div>`;
-              
-                    })
-          
+
+            })
+
         }
     </script>
-    
+
 </body>
+
 </html>

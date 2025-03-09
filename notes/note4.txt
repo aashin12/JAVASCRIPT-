@@ -26,8 +26,7 @@ Different way to access DOM
 2, document.getElementByClassname() - Return html collection of all tags with same class name
 3, document.getElementById() - Return directly the element
 4, document.querySelector() - //tag , //#id , //.class - Return the first matching element 
-5, document.querySelectorAll() - Return all the matching elelmnts as nodelist(array)
-
+5, document.querySelectorAll() - Return all the matching elements as nodelist(array)
 
 change the content in html document
 -----------------------------------
@@ -64,7 +63,7 @@ operations
 API 
 ---
 - application programming interface
-- application which provides an intrface to communicate btw the resources available in the intrnet 
+- application which provides an intrface to communicate btw the resources available in the internet 
 
 http
 ----
@@ -87,7 +86,7 @@ JSON
 - {
    'key':value
   }
-- This format is used becz it is compatibility across different platforms and programming languages.
+- This format is used becz of its compatibility across different platforms and programming languages.
 
 URL - uniform resource locator
 ---

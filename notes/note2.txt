@@ -78,7 +78,9 @@ console.log(variablename)
 
 `text ${variablename}`
 
-- js is dynamically typed programing languagae - changs the datatype 
+- js is dynamically typed programing languagae - 
+   You don’t need to declare the type of a variable when defining it.
+✅ A variable's data type can change at runtime.
 
 operators
 ---------
@@ -86,7 +88,7 @@ operators
 2. Arithmatic operators - " +,-,*,/,%,** "
 3. Relational operators - " >,<,>=,<=,==,=== "
    - it returns boolean value
-   ==(checks onl value)(type conversion is done)
+   ==(checks only value)(type conversion is done)
    ===(checks both value as well as datatype)
 4. Logical opeartors - " &&,||,! "
    - it returns boolean value
@@ -109,7 +111,7 @@ conditional statements / Decision making statements
    }
 2. switch case
 
-looping statements - to do a task repeatedly at a position of a programing file
+looping statements - to do a task repeatedly at a position of a programing file 
 ------------------
 1 while loop
 
@@ -163,22 +165,31 @@ To do a certain task repeatedly at diffrnt locations of the programming file.
 
  arrow function
  --------------
+ Arrow functions are a concise way to write functions in JavaScript.
  ES6 - version onwwards - arrow function is preffered
 
  syntax
  ------
- const variablename = ()=>{
+ const variablename = (param1, param2)=>{
    statements
+   return result
  }
 
  variablename()
 
  if there is only 1 statemnt the we can romve the curly bracket and return is done automatically.these steps can be ommited
 // for the same reason arrow function is preffered from ES6
+Arrow functions are perfect for short, one-liner callbacks in functions like map(), filter(), and reduce().
+
+ Implicit Return (Shorter Syntax)
+ -------------------------------
+If the function has only one expression, you can omit {} and return:
+const multiply = (a, b) => a * b;
+console.log(multiply(4, 5)); // Output: 20
 
 functional hoisting 
 -------------------
-posibble in regular function
+possible in regular function
 not possible in arrow function
 
 callback functions
@@ -196,17 +207,17 @@ A function defined inside another function
 
 closure property
 ----------------
-Variables inside a parent function can be accesed inside a child fun ction but the variables inside the child function cannot be accesd inside the parent function
+Variables inside a parent function can be accesed inside a child function but the variables inside the child function cannot be accesd inside the parent function
 
 Synchronous and Asynchronous
 ----------------------------
 Synchronous function - Functions without any time delay
-Asynchronous Function - Functions with time delay eg : Api,setTime/Out()
+Asynchronous Function - Functions with time delay eg : Api,setTimeOut()
 
 DataStructure
 -------------
 A specilized format for organizing ,processing,retreiving and storing data.
-eg Array,stack,queue,list ,linkedkist
+eg Array,stack,queue,list,linkedkist
 
 Array
 -----
@@ -235,7 +246,7 @@ Array operations
    for easiness we can give depth as Infinity so that we do not have to count the no of dimension
                                                                eg: arr.flat(Infinite)
 10. foreach() - used to access each items from a given array
-11. map() - used to access each elemnt from a given array and return a new array with same number of elemnt that of    the parent array
+11. map() - used to access each elemnt from a given array and return a new array with same number of elemnt that of the parent array
 12. reduce() - return a single value from the given array
     eg sum,highest,small 
 13. filter() - It returns a new array with all elemnts satisfying a particular condition 
@@ -244,8 +255,12 @@ Array operations
 16. includes(item) - return boolean value based on the item
 17. indexOf() - index of a particular item
 18. slice() - create a sub array(start index ,last index+1) 
-19. reduceRight()
-20. lastIndexOf()
+19. reduceRight() - reduceRight() works just like reduce(), but it processes the array from right to left instead of left to right.
+20. lastIndexOf() - returns the last occurrence index of a specified value in an array.
+                    If the value is not found, it returns -1.
+         syntax    : array.lastIndexOf(searchElement, fromIndex);
+
+
 
 differnt way to access items from an array
 -----------------------------------------

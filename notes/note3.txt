@@ -56,6 +56,7 @@ Exception Handling
 ------------------
 - exception  - Run time errors
 - exceptions are handles with the help of try-catch block
+- Prevents program crashes due to unexpected errors.
 
 syntax
 ------
