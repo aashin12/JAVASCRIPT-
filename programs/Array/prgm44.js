@@ -1,4 +1,4 @@
-//wap to findthe pairs that give pairsum as 6 from the given array
+//wap to find the pairs that give pairsum as 6 from the given array
 a=[2,3,4,5]
 len=a.length
 fl=0
