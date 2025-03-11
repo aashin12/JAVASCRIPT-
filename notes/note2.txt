@@ -38,7 +38,7 @@ eg , x=hello
      7 symbol - generate unique identifiers
               - symbol()
               - basically used in creatng libraries and modules based on js
-              
+
 2 non-primitive datatype - mutable
      8 object - reprented using key:value pairs
      eg ; object,array,functions
@@ -113,6 +113,7 @@ conditional statements / Decision making statements
    else{
      statement
    }
+   
 2. switch case
 
 looping statements - to do a task repeatedly at a position of a programing file 
