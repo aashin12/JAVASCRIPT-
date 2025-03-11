@@ -10,7 +10,7 @@ class Landing{
     //methods
     saveData(){
         if(this.database){
-            localStorage.setItem('database',JSON.stringify(this.database))  //both arguments shoul be string,so conerting object to string using json.stringify
+            localStorage.setItem('database',JSON.stringify(this.database))  //both arguments should be string,so converting object to string using json.stringify
         }
     }
 

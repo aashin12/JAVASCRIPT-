@@ -9,6 +9,7 @@ js - behaviour - frontend
    - logical operation -backend
 it supports both procedural programmng paradigm and object oriented progrming(oops)
 single thread programming language - line by line execution
+dynamically styled language - datatype -change
 
 procedural programing paradigm
 -----------------------------
@@ -191,6 +192,9 @@ functional hoisting
 -------------------
 possible in regular function
 not possible in arrow function
+
+typess of functions
+------------------
 
 callback functions
 ------------------

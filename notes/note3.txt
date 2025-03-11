@@ -37,7 +37,11 @@ pillars of oops
  - Parent class/super class/base class
  - Child class/sub class/derived class
  - keyword - extends 
- - Types - simple,multilevel,
+ - Types - single one to one
+         - multilevel - parent to child ,child to next child, not directly supportd ,so we use Mixins (Combining multiple objects)
+         - multiple - many to one,
+         - hierarcial - one to many,
+         - hybrid - combination of multiple and heirarchial
 
 
  object Inheritance 

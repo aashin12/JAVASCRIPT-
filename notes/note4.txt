@@ -64,10 +64,15 @@ API
 ---
 - application programming interface
 - application which provides an intrface to communicate btw the resources available in the internet 
+- An API is a set of rules and protocols that allows different software applications to communicate with each other.
+- middle man btw browser and server
+- used to connect backend with frontend
 
 http
 ----
 - Hypertext transfer protocol - Set of Rules that should be followed while communicating btw the resources.
+
+HTTPS,FTP,
 
 request header - imp data(like wht to do,content type,token(authorization))
 request body - data (data we have collected from the user)
@@ -78,6 +83,7 @@ methods
 2, get  - To retrieve data
 3, put  - To update the data
 4, delete - To remove a data 
+5, patch  - update only a particular portion
 
 JSON 
 ----
@@ -152,10 +158,12 @@ Issue: The entire script pauses until the data is fetched, causing performance i
    ----------
    1, reduction of then method
    2, can store the result into a variable
-   3, it helps the asynchronous function to behave like a synchronous function - therefore it can avoid call back hell.
+   3, it helps the asynchronous function to behave like a synchronous function - therefore it can avoid callback hell.
 
 async - The function which contains api call
 await - where api is coming / which is the api call
 
 note :it helps such that it stores 'then' result into a variable
-also await does not exist without async
+also await does not exist without async 
+
+- Being a single thread programming language how js handles both synchronous and asynchronous function together 
