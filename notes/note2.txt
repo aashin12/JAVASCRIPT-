@@ -7,7 +7,7 @@ features
 used in both front end(browser) and backend(node js environment )
 js - behaviour - frontend
    - logical operation -backend
-   
+
 it supports both procedural programmng paradigm and object oriented progrming(oops)
 single thread programming language - line by line execution
 dynamically styled language - datatype -change
@@ -24,6 +24,7 @@ data types in js
 ----------------
 
 generally there are 2 data types -
+
 1 primitive datatype - immutable datatype - 
 eg , x=hello
      x=Hello  can be reassigned but not be changed
