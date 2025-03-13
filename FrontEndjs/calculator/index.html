@@ -15,6 +15,14 @@
             color: white;
             flex-direction: column;
         }
+        .dark-mode {
+            background: linear-gradient(to right, #2C3E50, #4CA1AF);
+            color: white;
+        }
+        .light-mode {
+            background: linear-gradient(to right, #f8f9fa23, #f7091db7);
+            color: black;
+        }
         .calculator {
             width: 550px;
             border: 2px solid #ffffff;
@@ -22,12 +30,36 @@
             border-radius: 5px;
             background-color: #1B4949;
             text-align: center;
+            transition: background 0.5s;
+        }
+        .light-mode .calculator {
+            background: #d1baba;
+            border: 2px solid black;
+        }
+        .light-mode .ac{
+            border: 1px solid #0F3D3E;
+        }
+        .light-mode .display{
+            border: 2px solid #0F3D3E;
+            color: #0F3D3E;
         }
         .display-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .calculator {
+                width: 95%;
+            }
+            .dark-mode h1{
+               margin-top: auto;
+            }
+            .light-mode h1{
+               margin-top: auto;
+            }
         }
         .display {
             width: 78%;
@@ -53,6 +85,10 @@
         .ac:hover, td:hover {
             background-color: #0D7377;
         }
+        .light-mode .ac:hover, .light-mode td:hover {
+            background-color: #e76a94;
+        }
+
         table {
             width: 100%;
         }
@@ -61,12 +97,33 @@
             height: 50px;
             text-align: center;
             font-size: 1.5em;
-            border: 1px solid white;
+            border: 1px solid #0D7377 ;
             cursor: pointer;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #0D7377;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .light-mode .toggle-btn{
+            background-color: #e76a94;
+            border-color: #ffffff;
+            border: 1px solid;
         }
     </style>
 </head>
-<body>
+<body class="dark-mode" >
+    <button class="toggle-btn" onclick="toggleMode()">Dark mode</button>
     <h1  style="font-size: 50px;">Calculator</h1>
     <div class="calculator">
         <div class="display-container">

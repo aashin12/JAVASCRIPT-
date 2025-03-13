@@ -31,3 +31,18 @@ function calculateResult() {
         
     }
 }
+
+function toggleMode() {
+    const body = document.body;
+    const button = document.querySelector(".toggle-btn");
+    
+    if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        button.textContent = "Light Mode";
+    } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        button.textContent = "Dark Mode";
+    }
+}
