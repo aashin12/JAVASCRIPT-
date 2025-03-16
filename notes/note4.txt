@@ -33,6 +33,7 @@ change the content in html document
  .innerHTML()
 
  Events : Action performed by the user to update the Dom
+ 
 Eg:
  click
  change
