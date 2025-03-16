@@ -145,6 +145,7 @@ If AJAX was synchronous, the script would pause execution until the response arr
 Issue: The entire script pauses until the data is fetched, causing performance issues,page freezes.
 
 2, fetch 
+
   - ES6 - fetch is preferred
   - Promise() - it is a class used to handle asynchronous functions.
   -it have three states
