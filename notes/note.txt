@@ -19,9 +19,10 @@ data types in js
 
 generally there are 2 data types -
 1 primitive datatype - immutable datatype - (Cannot be changed)
+
  - Creates a new value
  - Creates new memory allocation 
- 
+
 eg , x=hello
      x=Hello  can be reassigned but not be changed
 
