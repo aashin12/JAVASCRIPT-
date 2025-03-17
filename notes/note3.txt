@@ -55,7 +55,7 @@ pillars of oops
                                     - rest operator(...) - arguments are returned as an array 
                - method overriding  - method with same name with same argument - then last written method will execute
 3,Abstraction  - hiding the implememntation details and showing only the essential part
-4,Encapsulation  - wrapping of data and methods into a single unit
+4,Encapsulation  - wrapping of data and methods into a single unit.
 
 Exception Handling
 ------------------
