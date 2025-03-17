@@ -33,6 +33,7 @@ this - instance variable
 pillars of oops 
 --------------
 1,Inheritance
+ ------------
  - Used to access properties and methods from one class to another
  - Parent class/super class/base class
  - Child class/sub class/derived class
