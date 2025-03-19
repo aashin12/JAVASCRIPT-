@@ -10,7 +10,7 @@ js - behaviour - frontend
 
 it supports both procedural programmng paradigm and object oriented progrming(oops)
 single thread programming language - line by line execution
-dynamically styled language - datatype -change
+dynamically styled language - allows variables to change their data type at runtime
 
 procedural programing paradigm
 -----------------------------
@@ -114,7 +114,16 @@ conditional statements / Decision making statements
      statement
    }
    
-2. switch case
+2. switch (expression) {
+ case value1:
+ // code to be executed if the expression equals value1
+ break;
+ case value2:
+ // code to be executed if the expression equals value2
+ break;
+ default:
+ // code to be executed if the expression doesn't match any case
+ } 
 
 looping statements - to do a task repeatedly at a position of a programing file 
 ------------------
@@ -168,10 +177,31 @@ To do a certain task repeatedly at diffrnt locations of the programming file.
  return - inorder to access variable outside the function
  statements after the return statemnts will not execute.
 
+difference between arguments and parameters
+--------------------------------------------
+Parameter : Variables in a function declaration/definition.
+Arguments : Actual values passed to the function when it is called
  arrow function
  --------------
  Arrow functions are a concise way to write functions in JavaScript.
  ES6 - version onwwards - arrow function is preffered
+
+ - ES6 - version onwords - arrow function is prefered .
+ - syntax
+ ------
+ const variablename = ()=> {statement}
+ variablename()
+
+ - Advantages
+ ---------
+ - Arrow functions have a shorter, more concise syntax compared to
+traditional function expressions. This makes the code cleaner, especially
+for simple functions.
+ - In an arrow function, if the function body consists of a single
+expression, the result of that expression is automatically returned. You
+don't need to explicitly use the return keyword.
+ - More readable code in scenarios like array operations and functional
+programming.
 
  syntax
  ------
@@ -207,14 +237,18 @@ call back functions are passed as arguments to another function and is excuted a
 
 predefined functions
 ---------------------
+also known as built-in functions
+ - functions that are provided by the JavaScript environment (the
+browser or Node.js) and are available for use without needing to define
+them yourself.
+
 eg parseInt,consol.log,math.floor,eval()
 
 Nested function
 ---------------
-A function defined inside another function 
-
-closure property
-----------------
+- A function defined inside another function 
+- closure property
+   --------------
 Variables inside a parent function can be accesed inside a child function but the variables inside the child function cannot be accesd inside the parent function
 
 Synchronous and Asynchronous
@@ -255,10 +289,10 @@ Array operations
                                                                eg: arr.flat(Infinite)
 10. foreach() - used to access each items from a given array
 11. map() - used to access each elemnt from a given array and return a new array with same number of elemnt that of the parent array
-12. reduce() - return a single value from the given array
+12. reduce((acc , currentvalue)=>) - return a single value from the given array
     eg sum,highest,small 
 13. filter() - It returns a new array with all elemnts satisfying a particular condition 
-14. find() - It retuns the first elemnt that satisfying a paricular condition
+14. find() - It retuns the first elemnt that satisfying a particular condition
 15. some() - To check the given condition is true or false
 16. includes(item) - return boolean value based on the item
 17. indexOf() - index of a particular item
@@ -270,7 +304,7 @@ Array operations
 
 
 
-differnt way to access items from an array
+Different way to access items from an array
 -----------------------------------------
 1. for loop
 2. in  - can access the indexes of an array
