@@ -238,6 +238,7 @@ call back functions are passed as arguments to another function and is excuted a
 predefined functions
 ---------------------
 also known as built-in functions
+
  - functions that are provided by the JavaScript environment (the
 browser or Node.js) and are available for use without needing to define
 them yourself.
