@@ -334,7 +334,7 @@ methods
 objects
 -------
 This also used to store more than 1 data of different data type that are sperated by comas and enclosed within curly bracket 
-unlike array the stored data have more clarity 
+unlike array the stored data have more clarity .
 
 object operations
 ----------------
