@@ -310,7 +310,7 @@ Different way to access items from an array
 2. in  - can access the indexes of an array
 3. of  - can access the items directly of an array
 
-nested array - array inside another array 
+nested array - array inside another array .
 
 string 
 ------
