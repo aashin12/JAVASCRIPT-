@@ -259,7 +259,7 @@ Asynchronous Function - Functions with time delay eg : Api,setTimeOut()
 DataStructure
 -------------
 A specilized format for organizing ,processing,retreiving and storing data.
-eg Array,stack,queue,list,linkedkist
+eg Array,stack,queue,list,linkedkist.
 
 Array
 -----
