@@ -5,7 +5,7 @@ features
 --------
 
 - used in both front end(browser) and backend(node js environment )
-js - behaviour - frontend
+- js - behaviour - frontend
    - logical operation -backend
 it supports both procedural programmng paradigm and object oriented progrming(oops)
 single thread programming language - line by line execution
