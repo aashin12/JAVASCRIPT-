@@ -42,7 +42,7 @@ eg , x=hello
 
 variable
 --------
-used to store data
+used to store data.
 identifiers - rules to create a variable
      1. variable name can have letters ,digits,underscore ext 
      2. name should not start with digits 
