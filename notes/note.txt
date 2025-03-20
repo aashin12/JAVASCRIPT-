@@ -4,7 +4,7 @@ javascript
 features
 --------
 
-used in both front end(browser) and backend(node js environment )
+- used in both front end(browser) and backend(node js environment )
 js - behaviour - frontend
    - logical operation -backend
 it supports both procedural programmng paradigm and object oriented progrming(oops)
