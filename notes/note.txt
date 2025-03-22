@@ -38,7 +38,7 @@ eg , x=hello
  - Mutable data types allow modifications to their values without creating a new reference in memory.
  - Modifies existing value
      8 object - reprented using key:value pairs
-     eg ; object,array,functions
+     eg ; object,array,functions.
 
 variable
 --------
