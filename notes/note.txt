@@ -46,6 +46,6 @@ variable
 - identifiers - rules to create a variable.
      1. variable name can have letters ,digits,underscore ext .
      2. name should not start with digits .
-     3. no white space between 2 words of variable name 
+     3. no white space between 2 words of variable name .
 
 
